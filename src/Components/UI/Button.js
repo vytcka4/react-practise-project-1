@@ -21,7 +21,11 @@ const ButtonStyled = styled.button`
 `;
 
 function Button(props) {
-  return <ButtonStyled type="submit">{props.children}</ButtonStyled>;
+  return (
+    <ButtonStyled type="submit" onClick={props.onClick}>
+      {props.children}
+    </ButtonStyled>
+  );
 }
 
 export default Button;
